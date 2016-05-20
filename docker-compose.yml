@@ -1,0 +1,21 @@
+version: "2"
+
+services:
+   rethinkdb:
+     image: rethinkdb
+     container_name: rethinkdb
+     networks:
+       - example
+     ports:
+       - 28015:28015
+   test:
+     build: .
+     image: network_example_image
+     container_name: test
+     networks:
+       - example
+
+
+networks:
+   example:
+    external: true
