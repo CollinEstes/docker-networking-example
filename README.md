@@ -8,4 +8,6 @@ docker network create example
 docker-compose up
 ```
 
-Should not see an connection errors as the example node process is connecting to rethinkdb running in a seperate container by using it's container name
+Should not see any connection errors as the example node process is connecting to rethinkdb running in a seperate container by using it's container name.  
+
+I created this to test docker-osx implmentations to see if docker bridge networked containers resolve connections by container names.
